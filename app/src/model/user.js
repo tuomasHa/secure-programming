@@ -4,15 +4,20 @@ const database = require('../database');
 const User = database.getConnection().define('user', {
   username: {
     type: Sequelize.STRING,
+    allowNull: false,
+    unique: true
+  },
+  password: {
+    type: Sequelize.STRING(64),
     allowNull: false
   },
   firstName: {
     type: Sequelize.STRING,
-    allowNull: false
+    allowNull: true
   },
   lastName: {
     type: Sequelize.STRING,
-    allowNull: false
+    allowNull: true
   }
 });
 
