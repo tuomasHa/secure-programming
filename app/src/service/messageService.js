@@ -1,7 +1,7 @@
 const Message = require('../model/message');
 
 module.exports = {
-  
+
   createMessage: (text, user) => {
     return Message.create({ text, userId: user.id });
   },
@@ -19,6 +19,12 @@ module.exports = {
       where: {
         userId: user.id
       }
+    });
+  },
+
+  getMessages: () => {
+    return Message.findAll({
+      attributes: ['text', 'userId']
     });
   }
 }

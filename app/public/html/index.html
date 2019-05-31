@@ -17,6 +17,7 @@
    crossorigin="anonymous"></script>
    <script src="/userInfo.js" ></script>
    <script src="/newChirp.js" ></script>
+   <script src="/messageFeed.js"></script>
 </head>
 <body>
 
@@ -27,11 +28,11 @@
     </button>
 
     <div class="collapse navbar-collapse" id="navbarContent">
-      <ul class="navbar-nav mr-auto">
+      <!--ul class="navbar-nav mr-auto">
         <li class="nav-item active">
           <a class="nav-link" href="/messages">My chirps</a>
         </li>
-      </ul>
+      </ul-->
       <ul class="nav ml-auto justify-content-end">
         <li class="nav-item active">
           <a class="nav-link" href="/logout">Logout</a>
@@ -43,15 +44,16 @@
   <div class="container-fluid">
     <div class="container">
       <div class="row">
-        <div id="messagesFeed" class="col-sm-8">
+        <div id="messageFeed" class="col-sm-8">
           <h1>All chirps</h1>
           <button type="button" class="btn btn-primary newChirpButton"
           data-toggle="modal" data-target="#newChirpModal">New chirp</button>
+          <div class="messageContainer"></div>
         </div>
         <div id="userInfo" class="col-sm-4">
           <h3 class="name"></h3>
-          <span class="username"></span>
-          <a class="count" href="/messages"># chirps</a>
+          <div class="username"></div>
+          <div class="count" ># chirps</div>
         </div>
       </div>
     </div>

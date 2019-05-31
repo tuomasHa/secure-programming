@@ -3,4 +3,13 @@
   display: block;
 }
 
-#messagesFeed .newChirpButton {}
+#messageFeed .newChirpButton {}
+
+#messageFeed .messageContainer .feedMessage {
+  padding-top: 10px;
+  padding-bottom: 5px;
+}
+
+#messageFeed .messageContainer .feedMessage .messageName {
+  font-weight: bold;
+}

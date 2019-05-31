@@ -23,6 +23,10 @@ module.exports = {
       res.sendFile(getStaticFile('script/newChirp.js'));
     });
 
+    app.get(`/messageFeed.js`, (req, res) => {
+      res.sendFile(getStaticFile('script/messageFeed.js'));
+    });
+
     app.get(`/index.css`, (req, res) => {
       res.sendFile(getStaticFile('style/index.css'));
     });
