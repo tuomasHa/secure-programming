@@ -10,7 +10,7 @@ module.exports = {
       res.sendFile(getStaticFile('html/register.html'));
     });
 
-    app.get(`${registerPath}/register.js`, (req, res) => {
+    app.get(`${registerPath}/script.js`, (req, res) => {
       res.sendFile(getStaticFile('script/register.js'));
     });
 

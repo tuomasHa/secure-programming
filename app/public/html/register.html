@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+    crossorigin="anonymous">
+   <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+  	integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  	crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+   integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+   crossorigin="anonymous"></script>
+  <script src="register/script.js" ></script>
+</head>
+<body>
+
+  <div class="container-fluid">
+    <h1>Register new user</h1>
+
+    <form id="registerForm">
+      <div class="form-group">
+        <label for="registerUsername">Username*</label>
+        <input type="text" class="form-control" id="registerUsername"
+          name="username" aria-describedby="registerUsernameHelp"
+          placeholder="Enter username" required>
+        <small id="registerUsernameHelp" class="form-text text-muted">
+          Username can contain letters a-z and numbers.
+        </small>
+      </div>
+      <div class="form-group">
+        <label for="registerPassword">Password*</label>
+        <input type="password" class="form-control" id="registerPassword"
+          name="password" aria-describedby="registerPasswordHelp"
+          placeholder="Enter password" required>
+        <small id="registerPasswordHelp" class="form-text text-muted">
+          Password must be at least 10 characters long and it must contain letters and numbers.
+        </small>
+      </div>
+      <div class="form-group">
+        <label for="registerRepeatPassword">Repeat password*</label>
+        <input type="password" class="form-control" id="registerRepeatPassword"
+          name="repeatPassword" placeholder="Repeat password" required
+          data-container="body" data-placement="bottom"
+          data-content="Passwords don't match!">
+      </div>
+      <div class="form-group" id="registerForm">
+        <label for="registerFirstName">First name</label>
+        <input type="text" class="form-control" id="registerFirstName"
+          name="firstName" placeholder="Enter first name">
+      </div>
+      <div class="form-group" id="registerForm">
+        <label for="registerLastName">Last name</label>
+        <input type="text" class="form-control" id="registerLastName"
+          name="lastName" placeholder="Enter last name">
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+
+</body>
+</html>
