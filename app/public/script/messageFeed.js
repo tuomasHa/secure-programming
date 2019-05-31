@@ -25,9 +25,10 @@ Server responded with ${thrownError} (${xhr.status}) - ${xhr.responseText}`);
 
 var generateMessage = function(name, text) {
   var message = $("<div class='feedMessage'></div>");
-  message.append(
-    $("<span class='messageName'>" + name + ":&nbsp</span>"),
-    $("<span class='messageText'>" + decodeURIComponent(text) + "</span>")
-  );
+  var eName = $("<span class='messageName'></span>");
+  var eText = $("<span class='messageText'></span>")
+  eName.text("" + name + " ");
+  eText.text(decodeURIComponent(text));
+  message.append(eName, eText);
   return message;
 }
