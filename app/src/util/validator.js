@@ -19,5 +19,17 @@ module.exports = {
     else {
       return false;
     }
+  },
+
+  validateMessageForm: text => {
+    if (!text) {
+      return 'No message content';
+    }
+    else if (text.length > 2000) {
+      return 'Message content is too long';
+    }
+    else {
+      return false;
+    }
   }
 }

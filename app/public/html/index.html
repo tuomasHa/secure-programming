@@ -16,6 +16,7 @@
    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
    crossorigin="anonymous"></script>
    <script src="/userInfo.js" ></script>
+   <script src="/newChirp.js" ></script>
 </head>
 <body>
 
@@ -43,7 +44,9 @@
     <div class="container">
       <div class="row">
         <div id="messagesFeed" class="col-sm-8">
-          PLACEHOLDER
+          <h1>All chirps</h1>
+          <button type="button" class="btn btn-primary newChirpButton"
+          data-toggle="modal" data-target="#newChirpModal">New chirp</button>
         </div>
         <div id="userInfo" class="col-sm-4">
           <h3 class="name"></h3>
@@ -53,6 +56,31 @@
       </div>
     </div>
   </div>
+
+  <div id="newChirpModal" class="modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">New chirp</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form id="newChirpForm">
+          <div class="form-group">
+            <label for="newChirpInput">Your chirp</label>
+            <textarea class="form-control" id="newChirpInput" name="text"
+            rows="5" maxlength="250"></textarea>
+          </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary sendButton">Send</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 </body>
 </html>

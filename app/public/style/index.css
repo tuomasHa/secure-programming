@@ -2,3 +2,5 @@
 #userInfo > * {
   display: block;
 }
+
+#messagesFeed .newChirpButton {}

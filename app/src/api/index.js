@@ -19,6 +19,10 @@ module.exports = {
       res.sendFile(getStaticFile('script/userInfo.js'));
     });
 
+    app.get(`/newChirp.js`, (req, res) => {
+      res.sendFile(getStaticFile('script/newChirp.js'));
+    });
+
     app.get(`/index.css`, (req, res) => {
       res.sendFile(getStaticFile('style/index.css'));
     });

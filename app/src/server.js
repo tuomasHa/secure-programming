@@ -8,6 +8,7 @@ const properties = require('./util/properties');
 const indexApi = require('./api/index');
 const registerApi = require('./api/register');
 const loginApi = require('./api/login');
+const messageApi = require('./api/message');
 
 
 const app = express();
@@ -24,5 +25,6 @@ app.use(passport.session());
 indexApi.initialize(app);
 registerApi.initialize(app);
 loginApi.initialize(app);
+messageApi.initialize(app);
 
 app.listen(8080);
